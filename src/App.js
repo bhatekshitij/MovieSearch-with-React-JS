@@ -36,7 +36,7 @@ const App = () => {
 
 
     useEffect(() => {
-        searchMovies('superman');
+        searchMovies(SearchTerm);
     }, [])
 
 
@@ -45,8 +45,8 @@ const App = () => {
         <div className="app">
             <h1>MovieApp</h1>
             <div className="search">
-                <input placeholder="Search for movies" value={SearchTerm} onChange={() => { }} />
-                <img src={SearchIcon} alt="search" />
+                <input placeholder="Search for movies" value={SearchTerm} onChange={(e) => { setSearchTerm(e.target.value) }} />
+                <img src={SearchIcon} alt="search" onClick={() => searchMovies(SearchTerm)} />
             </div>
             {movies?.length > 0 ? (<div className="container">
 
