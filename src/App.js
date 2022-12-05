@@ -30,7 +30,7 @@ const App = () => {
 
     useEffect(() => {
         searchMovies(SearchTerm);
-    }, [])
+    }, [SearchTerm])
 
 
 
