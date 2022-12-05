@@ -9,13 +9,6 @@ import SearchIcon from './search.svg'
 
 
 const API_URL = `http://www.omdbapi.com/?apikey=56d8e504`
-const movie1 = {
-    "Title": "Batman v Superman: Dawn of Justice (Ultimate Edition)",
-    "Year": "2016",
-    "imdbID": "tt18689424",
-    "Type": "movie",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BN2I4OTllM2MtMWVhNC00MjkzLWJlMDUtN2FhMGQ2ZGVjMjllXkEyXkFqcGdeQXVyMTEyNzgwMDUw._V1_SX300.jpg"
-}
 
 
 
@@ -26,7 +19,7 @@ const App = () => {
 
 
 
-    var async = require('async');
+
     const searchMovies = async (title) => {
         const response = await fetch(`${API_URL}&s=${title}`);
         const data = await response.json();
